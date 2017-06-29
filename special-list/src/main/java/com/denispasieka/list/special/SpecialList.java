@@ -5,13 +5,16 @@ package com.denispasieka.list.special;
 */
 public class SpecialList {
 
-    SpecialListElement listHead;
+    SpecialListElement listHead = null;
 
     public SpecialList() {
 
     }
 
     public void add(String s) {
+        if(listHead = null) {
+            listHead = new SpecialListElement(s);
+        }
 
     }
    /** public boolean remove(String s) {
