@@ -1,6 +1,7 @@
 package com.denispasieka.list;
 
 import com.denispasieka.list.special.SpecialListElement;
+import com.denispasieka.list.special.SpecialList;
 
 /**
  * Created by zevisto on 29.06.17.
@@ -8,13 +9,8 @@ import com.denispasieka.list.special.SpecialListElement;
 public class ListRunner {
 
     public static void main(String[] args){
-        SpecialListElement firstElement = new SpecialListElement("empty", null, null);
-        firstElement.getValue();
-        System.out.println(firstElement);
-
-        SpecialListElement secondElement = new SpecialListElement("empty too");
-        firstElement.getValue();
-        System.out.println(secondElement);
+        SpecialList list = new SpecialList();
+        list.add("Hello");
 
         for(int x = 0; x < 3000; x++) {
 
