@@ -2,26 +2,29 @@ package com.denispasieka.list.special;
 
 /**
  * Created by zevisto on 29.06.17.
-
+*/
 public class SpecialList extends SpecialListElement {
 
     SpecialListElement listHead;
 
+    public SpecialList() {
+
+    }
+
     public void add(String s) {
 
     }
-    public boolean remove(String s) {
+   /** public boolean remove(String s) {
+
+   // }
+   // public String get(int n) {
+
+  //  }
+   // public int size() {
+
+  //  }
+   // public void add(int n, String s) {
 
     }
-    public String get(int n) {
-
-    }
-    public int size() {
-
-    }
-    public void add(int n, String s) {
-
-    }
-
+*/
 }
- */
