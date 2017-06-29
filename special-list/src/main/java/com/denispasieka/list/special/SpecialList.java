@@ -3,14 +3,24 @@ package com.denispasieka.list.special;
 /**
  * Created by zevisto on 29.06.17.
  */
-public class SpecialList {
+public class SpecialList extends SpecialListElement {
 
     SpecialListElement listHead;
 
-    public void add(String s);
-    public boolean remove(String s);
-    public String get(int n);
-    public int size();
-    public void add (int n, String s);
+    public void add(String s) {
+
+    }
+    public boolean remove(String s) {
+
+    }
+    public String get(int n) {
+
+    }
+    public int size() {
+
+    }
+    public void add(int n, String s) {
+
+    }
 
 }
