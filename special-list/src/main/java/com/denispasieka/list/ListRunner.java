@@ -6,7 +6,7 @@ package com.denispasieka.list;
 public class ListRunner {
 
     public static void main(String[] args){
-        System.out.println("Hello in the list module");
+
     };
 
 }
