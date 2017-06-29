@@ -12,7 +12,7 @@ public class ListRunner {
         firstElement.getValue();
         System.out.println(firstElement);
 
-        SpecialListElement secondElement = new SpecialListElement("empty too", null, firstElement);
+        SpecialListElement secondElement = new SpecialListElement("empty too");
         firstElement.getValue();
         System.out.println(secondElement);
 
