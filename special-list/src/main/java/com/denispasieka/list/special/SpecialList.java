@@ -18,6 +18,7 @@ public class SpecialList {
             SpecialListElement theLastElement = listHead;
             while(theLastElement.getNext() != null) {
                 theLastElement = theLastElement.getNext();
+                SpecialListElement temporary = new SpecialListElement(s, null, theLastElement);
             }
         }
 
