@@ -12,7 +12,7 @@ public class SpecialList {
     }
 
     public void add(String s) {
-        if(listHead = null) {
+        if(listHead == null) {
             listHead = new SpecialListElement(s);
         }
 
