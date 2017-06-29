@@ -12,8 +12,13 @@ public class SpecialList {
     }
 
     public void add(String s) {
+        SpecialListElement theLastElement = listHead;
         if(listHead == null) {
             listHead = new SpecialListElement(s);
+        } else {
+            while(theLastElement.getNext() != null) {
+                theLastElement = theLastElement.getNext();
+            }
         }
 
     }
