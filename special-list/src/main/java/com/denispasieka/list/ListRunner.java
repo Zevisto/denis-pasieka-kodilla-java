@@ -11,6 +11,16 @@ public class ListRunner {
     public static void main(String[] args){
         SpecialList list = new SpecialList();
         list.add("Hello");
+        list.add("Michał");
+        list.add("Wojtek");
+        list.add("Mysz");
+        list.add("Komputer");
+        list.add("Linux");
+        list.add("Windows");
+        list.add("Ekran");
+        list.add("Komar");
+        list.add("Mucha");
+        list.add("Drzwi");
 
         for(int x = 0; x < 3000; x++) {
 
