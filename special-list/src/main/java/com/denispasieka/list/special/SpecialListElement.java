@@ -33,7 +33,7 @@ public class SpecialListElement {
         return this.previous;
     }
 
-    public toString() {
+    public String toString() {
         return "Object with value : " + value + ".";
     }
 
