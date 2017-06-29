@@ -20,6 +20,7 @@ public class SpecialList {
                 theLastElement = theLastElement.getNext();
             }
             SpecialListElement temporary = new SpecialListElement(s, null, theLastElement);
+            SpecialListElement.setNext(temporary);
         }
 
     }

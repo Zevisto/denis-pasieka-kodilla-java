@@ -33,6 +33,14 @@ public class SpecialListElement {
         return this.previous;
     }
 
+    public void setNext(SpecialListElement next) {
+        this.next = next;
+    }
+
+    public void setPrevious(SpecialListElement previous) {
+        this.previous = previous;
+    }
+
     public String toString() {
         return "Object with value : " + value + ".";
     }
