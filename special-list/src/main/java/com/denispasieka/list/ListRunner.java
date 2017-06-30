@@ -21,7 +21,7 @@ public class ListRunner {
         list.add("Komar");
         list.add("Mucha");
         list.add("Drzwi");
-        System.out.println(list.get(5));
+        System.out.println(list.get(15));
 
         for(int x = 0; x < 3000; x++) {
 //

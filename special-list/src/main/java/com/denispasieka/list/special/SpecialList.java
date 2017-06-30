@@ -37,6 +37,9 @@ public class SpecialList {
         if(currentObject == n) {
             return "Object number : " + n + " contains word '" + temporary.getValue() + "'.";
         }
+        if(n >= size()) {
+            return null;
+        }
         return "Object not found.";
     }
     public int size() {
