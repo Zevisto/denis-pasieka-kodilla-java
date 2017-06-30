@@ -24,7 +24,7 @@ public class ListRunner {
         System.out.print(list.size());
 
         for(int x = 0; x < 3000; x++) {
-
+//
         }
     };
 
