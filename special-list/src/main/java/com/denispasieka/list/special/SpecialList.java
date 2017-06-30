@@ -27,9 +27,18 @@ public class SpecialList {
   //  public boolean remove(String s) {
   //      amount--;
   //  }
-   // public String get(int n) {
-
-  //  }
+    public String get(int n) {
+        int currentObject = 1;
+        SpecialListElement temporary = listHead;
+        while(currentObject != n) {
+            temporary = temporary.getNext();
+            currentObject++;
+        }
+        if(currentObject == n) {
+            return "Object number : " + n + " contains word '" + temporary.getValue() + "'.";
+        }
+        return "Object not found.";
+    }
     public int size() {
         int currentSize = 0;
         SpecialListElement temporary = listHead;
