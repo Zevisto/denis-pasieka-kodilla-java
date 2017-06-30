@@ -33,6 +33,9 @@ public class SpecialList {
     public int size() {
         int currentSize = 1;
         SpecialListElement temporary = listHead;
+        if(temporary == null){
+            currentSize = 0;
+        }
         while(temporary != null) {
             if(temporary.getNext() != null) {
                 currentSize++;
