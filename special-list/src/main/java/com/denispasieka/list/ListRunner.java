@@ -21,6 +21,7 @@ public class ListRunner {
         list.add("Komar");
         list.add("Mucha");
         list.add("Drzwi");
+        System.out.print(list.size());
 
         for(int x = 0; x < 3000; x++) {
 
