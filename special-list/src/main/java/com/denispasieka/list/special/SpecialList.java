@@ -31,17 +31,13 @@ public class SpecialList {
 
   //  }
     public int size() {
-        int currentSize = 1;
+        int currentSize = 0;
         SpecialListElement temporary = listHead;
-        if(temporary == null){
-            currentSize = 0;
-        }
-        while(temporary != null) {
-            if(temporary.getNext() != null) {
+        if (temporary != null) {
+            currentSize = 1;
+            while(temporary.getNext() != null) {
                 currentSize++;
                 temporary = temporary.getNext();
-            } else {
-                return currentSize;
             }
         }
         return currentSize;
