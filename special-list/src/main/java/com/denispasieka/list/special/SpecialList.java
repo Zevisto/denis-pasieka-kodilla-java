@@ -6,14 +6,12 @@ package com.denispasieka.list.special;
 public class SpecialList {
 
     SpecialListElement listHead = null;
-    public int amount = 0;
 
     public SpecialList() {
 
     }
 
     public void add(String s) {
-        amount++;
         if(listHead == null) {
             listHead = new SpecialListElement(s);
         } else {
@@ -33,7 +31,17 @@ public class SpecialList {
 
   //  }
     public int size() {
-        return amount;
+        int currentSize = 1;
+        SpecialListElement temporary = listHead;
+        while(temporary != null) {
+            if(temporary.getNext() != null) {
+                currentSize++;
+                temporary = temporary.getNext();
+            } else {
+                return currentSize;
+            }
+        }
+        return currentSize;
     }
    // public void add(int n, String s) {
 
