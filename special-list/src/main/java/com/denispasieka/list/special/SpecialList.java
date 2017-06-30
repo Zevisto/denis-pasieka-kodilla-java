@@ -30,22 +30,18 @@ public class SpecialList {
    // public String get(int n) {
 
   //  }
-    public int size() {
-        int currentSize = 1;
-        SpecialListElement temporary = listHead;
-        if(temporary == null){
-            currentSize = 0;
-        }
-        while(temporary != null) {
-            if(temporary.getNext() != null) {
-                currentSize++;
-                temporary = temporary.getNext();
-            } else {
-                return currentSize;
-            }
-        }
-        return currentSize;
-    }
+  public int size() {
+      int currentSize = 0;
+      SpecialListElement temporary = listHead;
+      if (temporary != null) {
+          currentSize = 1;
+          while(temporary.getNext() != null) {
+              currentSize++;
+              temporary = temporary.getNext();
+          }
+      }
+      return currentSize;
+  }
    // public void add(int n, String s) {
 
   //  }
