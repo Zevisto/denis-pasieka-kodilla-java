@@ -30,15 +30,15 @@ public class SpecialList {
     public String get(int n) {
         int currentObject = 1;
         SpecialListElement temporary = listHead;
+        if(n >= size()) {
+            return null;
+        }
         while(currentObject != n) {
             temporary = temporary.getNext();
             currentObject++;
         }
         if(currentObject == n) {
             return "Object number : " + n + " contains word '" + temporary.getValue() + "'.";
-        }
-        if(n >= size()) {
-            return null;
         }
         return "Object not found.";
     }
