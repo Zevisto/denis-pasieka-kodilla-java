@@ -11,15 +11,15 @@ public class CollectionTestSuite {
     @Test
     public void testOddNumbersExterminatorListSizeCheck() {
         System.out.println("Checking if the array size is right: ");
-        Bob.exterminate(numbers);
-        Assert.assertTrue(numbers.size() == 2);
+        ArrayList<Integer> bobList = Bob.exterminate(numbers);
+        Assert.assertTrue(bobList.size() == 2);
     }
     @Test
     public void testOddNumbersExterminatorListCheck() {
         System.out.println("Checking if the numbers in array are divided by 2: ");
-        Bob.exterminate(numbers);
-        for (int n = 0; n < numbers.size(); n++) {
-            Assert.assertTrue(numbers.get(n) % 2 == 0);
+        ArrayList<Integer> bobList = Bob.exterminate(numbers);
+        for (int n = 0; n < bobList.size(); n++) {
+            Assert.assertTrue(bobList.get(n) % 2 == 0);
         }
     }
     @Before
