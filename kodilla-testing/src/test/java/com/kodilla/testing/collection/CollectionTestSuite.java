@@ -6,18 +6,18 @@ import java.util.*;
 
 public class CollectionTestSuite {
     ArrayList<Integer> numbers = new ArrayList<Integer>();
-    OddNumbersExterminator Bob = new OddNumbersExterminator();
+    OddNumbersExterminator numbersExterminator = new OddNumbersExterminator();
 
     @Test
     public void testOddNumbersExterminatorListSizeCheck() {
         System.out.println("Checking if the array size is right: ");
-        ArrayList<Integer> bobList = Bob.exterminate(numbers);
+        ArrayList<Integer> bobList = numbersExterminator.exterminate(numbers);
         Assert.assertTrue(bobList.size() == 2);
     }
     @Test
     public void testOddNumbersExterminatorListCheck() {
         System.out.println("Checking if the numbers in array are divided by 2: ");
-        ArrayList<Integer> bobList = Bob.exterminate(numbers);
+        ArrayList<Integer> bobList = numbersExterminator.exterminate(numbers);
         for (int n = 0; n < bobList.size(); n++) {
             Assert.assertTrue(bobList.get(n) % 2 == 0);
         }
