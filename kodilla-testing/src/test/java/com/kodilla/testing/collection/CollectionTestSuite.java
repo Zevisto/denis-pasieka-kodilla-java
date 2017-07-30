@@ -6,42 +6,35 @@ import java.util.*;
 
 public class CollectionTestSuite {
     ArrayList<Integer> numbers = new ArrayList<Integer>();
+    OddNumbersExterminator Bob = new OddNumbersExterminator();
 
     @Test
+    public void testOddNumbersExterminatorListSizeCheck() {
+        System.out.println("Checking if the array size is right: ");
+        Bob.exterminate(numbers);
+        Assert.assertTrue(numbers.size() == 2);
+    }
+    @Test
     public void testOddNumbersExterminatorListCheck() {
-        System.out.println("List check: ");
-        numbers.add(12);
-        numbers.add(10);
-        numbers.add(2);
-        numbers.add(50);
-        numbers.add(22);
-        for(int n = 0; n < numbers.size(); n++) {
+        System.out.println("Checking if the numbers in array are divided by 2: ");
+        Bob.exterminate(numbers);
+        for (int n = 0; n < numbers.size(); n++) {
             Assert.assertTrue(numbers.get(n) % 2 == 0);
-        }
-    }
-    @Test
-    public void testOddNumbersExterminatorEmptyList() {
-        System.out.println("Empty List check: ");
-        Assert.assertTrue(numbers.size() == 0);
-    }
-    @Test
-    public void testOddNumbersExterminatorNormalList() {
-        numbers.add(1);
-        numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        System.out.println("Normal List check : ");
-        for(int n = 0; n < numbers.size(); n++) {
-            Assert.assertFalse(numbers.get(n) % 2 == 0);
         }
     }
     @Before
     public void start() {
+        numbers.add(12);
+        numbers.add(10);
+        numbers.add(11);
+        numbers.add(3);
+        numbers.add(5);
+        numbers.add(19);
         System.out.println("\n Starting test.");
     }
     @After
     public void finish() {
+        numbers.clear();
         System.out.println("\n Test finished.");
     }
 }
