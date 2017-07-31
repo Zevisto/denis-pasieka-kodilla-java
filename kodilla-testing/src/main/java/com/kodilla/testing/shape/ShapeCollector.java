@@ -4,22 +4,22 @@ import java.util.ArrayList;
 
 public class ShapeCollector {
 
+    ArrayList<Shape> shapeCollection = new ArrayList<Shape>();
+
     public void addFigure(Shape shape) {
-        ArrayList<Shape> result = new ArrayList<Shape>();
-        result.add(shape);
+        shapeCollection.add(shape);
     }
     public void removeFigure(Shape shape) {
-        ArrayList<Shape> result = new ArrayList<Shape>();
-        result.remove(shape);
+        shapeCollection.remove(shape);
     }
     public Shape getFigure(int n) {
-        ArrayList<Shape> result = new ArrayList<Shape>();
-        return result.get(n);
+        return shapeCollection.get(n);
     }
     public void showFigures() {
-        ArrayList<Shape> result = new ArrayList<Shape>();
-        for(int n = 0; n < result.size(); n++) {
-            System.out.println(result.get(n));
+        System.out.println("Your collection contains.");
+        for(int n = 0; n < shapeCollection.size(); n++) {
+            Shape temporaryBox = shapeCollection.get(n);
+            System.out.println("Element : " + temporaryBox.getShapeName() + " with size : " + temporaryBox.getField() + ".");
         }
     }
 }

@@ -1,12 +1,11 @@
 package com.kodilla.testing.shape;
 
+import org.junit.After;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
-
 public class ShapeCollectorTestSuite {
-    ArrayList<Shape> shapeCollection = new ArrayList<Shape>();
     ShapeCollector shapeCollector = new ShapeCollector();
     Square square = new Square();
     Triangle triangle = new Triangle();
@@ -14,23 +13,34 @@ public class ShapeCollectorTestSuite {
 
     @Test
     public void addFigure() {
-        shapeCollector.addFigure(square);
-        shapeCollector.addFigure(triangle);
-        shapeCollector.addFigure(circle);
-        Assert.assertTrue(shapeCollection.size() == 3);
+        System.out.println("Testing .addFigure.");
+        Assert.assertTrue(shapeCollector.getFigure(0) == square);
     }
     @Test
     public void removeFigure() {
+        System.out.println("Testing .removeFigure.");
         shapeCollector.removeFigure(triangle);
-        Assert.assertTrue(shapeCollection.get(1) == square && shapeCollection.get(2) == null);
+        Assert.assertTrue(shapeCollector.getFigure(1) != triangle);
     }
     @Test
     public void getFigure() {
-        Shape figure = shapeCollector.getFigure(1);
-        Assert.assertTrue(figure == square);
+        System.out.println("Testing .getFigure.");
+        Assert.assertTrue(shapeCollector.getFigure(0) == square);
     }
     @Test
     public void showFigures() {
+        System.out.println("Testing .showFigures : ");
         shapeCollector.showFigures();
+    }
+    @Before
+    public void before() {
+        shapeCollector.addFigure(square);
+        shapeCollector.addFigure(triangle);
+        shapeCollector.addFigure(circle);
+        System.out.println("Starting test: ");
+    }
+    @After
+    public void after() {
+        System.out.println("Test finished. \n");
     }
 }
