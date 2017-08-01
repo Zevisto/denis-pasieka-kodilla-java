@@ -25,4 +25,7 @@ public class CountStats {
         averageCommentsPerPost = postsCount / commentsCount;
 
     }
+    public int getAverageCommentsPerUser() {
+        return averageCommentsPerUser;
+    }
 }

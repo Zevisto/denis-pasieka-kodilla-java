@@ -22,7 +22,7 @@ public class CountStatsTest {
         Mockito.when(statisticsMock.postsCount()).thenReturn(1000);
         testObject.calculateAdvStatistics(statisticsMock);
         testObject.showStatistics();
-        Assert.assertTrue(statisticsMock.usersNames().size() == 100);
+        Assert.assertTrue(statisticsMock.usersNames().size() == 100 && testObject.getAverageCommentsPerUser() == 1);
     }
     @Before
     public void before() {
