@@ -20,9 +20,6 @@ public class BookLibrary {
         return bookList;
     }
     public List<Book> listBooksInHandsOf(LibraryUser libraryUser) {
-        if(libraryDatabase.returnBooks(libraryUser) != 0) {
-            return libraryUser.showMyBooks();
-        }
-        return null;
+        return libraryDatabase.listBooksInHandsOf(libraryUser);
     }
 }
