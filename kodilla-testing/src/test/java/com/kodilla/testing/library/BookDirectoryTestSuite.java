@@ -86,11 +86,12 @@ public class BookDirectoryTestSuite {
     @Test
     public void listBooksInHandsOf() {
         LibraryDatabase libraryDatabaseMock = Mockito.mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> bookList = generateListOfNBooks(5);
         LibraryUser libraryUser = new LibraryUser("Bo", "Dzio", "0700880974");
         Mockito.when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(bookList);
-        Assert.assertTrue(libraryDatabaseMock.listBooksInHandsOf(libraryUser).size() == 5);
+        Assert.assertTrue(bookLibrary.listBooksInHandsOf(libraryUser).size() == 5);
         bookList.clear();
-        Assert.assertTrue(libraryDatabaseMock.listBooksInHandsOf(libraryUser).size() == 0);
+        Assert.assertTrue(bookLibrary.listBooksInHandsOf(libraryUser).size() == 0);
     }
 }
