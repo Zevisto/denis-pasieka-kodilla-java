@@ -1,3 +1,4 @@
 include 'special-list'
 include 'kodilla-testing'
+include 'kodilla-stream'
 
